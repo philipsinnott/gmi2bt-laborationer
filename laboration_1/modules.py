@@ -3,7 +3,7 @@
 from random import randint
 import statistics
 
-def function_one(num1, num2):
+def function_one():
     numbers = []
 
     while True:
@@ -57,19 +57,20 @@ def guess_num():
 
 def menu():
 
-    choice = input("[1]: Function 1\n"
-                   "[2]: Guess the number!\n"
-                   "[3]: Exit\n"
-                   "Choose what you want to do: ")
-    if choice == "1":
-        print()
-        function_one(num1 = 0, num2 = 0)
-    elif choice == "2":
-        print()
-        guess_num()
-    elif choice == "3":
-        print("Au revoir.")
-        exit()
-    else:
-        print("Invalid input, please choose a valid option (1-3).")
-        menu()
+    while True:
+        choice = input("[1]: Function 1\n"
+                       "[2]: Guess the number!\n"
+                       "[3]: Exit\n"
+                       "Choose what you want to do: ")
+        if choice == "1":
+            print()
+            function_one()
+        elif choice == "2":
+            print()
+            guess_num()
+        elif choice == "3":
+            print("Au revoir.")
+            break
+        else:
+            print("Invalid input, please choose a valid option (1-3).")
+
